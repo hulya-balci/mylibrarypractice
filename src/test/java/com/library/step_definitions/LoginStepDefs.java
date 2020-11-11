@@ -3,6 +3,7 @@ package com.library.step_definitions;
 import com.library.pages.BasePage;
 import com.library.pages.DashboardPage;
 import com.library.pages.LoginPage;
+import com.library.utilities.BrowserUtils;
 import com.library.utilities.ConfigurationReader;
 import com.library.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -14,16 +15,15 @@ import java.util.concurrent.TimeUnit;
 
 public class LoginStepDefs {
 
-    LoginPage loginPage=new LoginPage();
-    DashboardPage dashboardPage=new DashboardPage();
-
+    LoginPage loginPage = new LoginPage();
+    DashboardPage dashboardPage = new DashboardPage();
 
 
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
 
         Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        String url= ConfigurationReader.get("url");
+        String url = ConfigurationReader.get("url");
         Driver.get().get(url);
 
     }
@@ -31,17 +31,18 @@ public class LoginStepDefs {
     @When("user enter {string} and enter {string}")
     public void user_enter_and_enter(String email, String password) {
 
-        loginPage.login(email,password );
-
+        loginPage.login(email, password);
 
 
     }
+
     @Then("user logged in page")
     public void user_logged_in_page() {
-
-      String actualSubtitle=dashboardPage.getPageSubTitle();
-      Assert.assertEquals("Library", actualSubtitle);
-        System.out.println("actualSubtitle = " + actualSubtitle);
+        BrowserUtils.waitFor(2);
+        String title = Driver.get().getTitle();
+       // String actualSubtitle = dashboardPage.getPageSubTitle();
+        Assert.assertEquals("Library", title);
+        //System.out.println("actualSubtitle = " + actualSubtitle);
 
     }
 
@@ -69,7 +70,6 @@ public class LoginStepDefs {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-
 
 
 }
