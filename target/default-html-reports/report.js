@@ -330,22 +330,19 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user login as “usertype”",
+  "name": "user login as “Student”",
   "keyword": "When "
 });
-formatter.match({
-  "location": "com.library.step_definitions.LoginStepDefs.user_login_as_usertype()"
-});
+formatter.match({});
 formatter.result({
-  "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.library.step_definitions.LoginStepDefs.user_login_as_usertype(LoginStepDefs.java:53)\r\n\tat ✽.user login as “usertype”(file:///C:/Users/hhila/IdeaProjects/mylibrarypractice/src/test/resources/features/login.feature:24)\r\n",
-  "status": "pending"
+  "status": "undefined"
 });
 formatter.step({
   "name": "title contains “page”",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.library.step_definitions.LoginStepDefs.title_contains_page()"
+  "location": "com.library.step_definitions.LoginStepDefs.title_contains(java.lang.String)"
 });
 formatter.result({
   "status": "skipped"
@@ -371,7 +368,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "Error message \"Sorry, Wrong Email or Password\" display",
+  "name": "Error \"\u003cmessage\u003e\" displayed",
   "keyword": "Then "
 });
 formatter.examples({
@@ -382,37 +379,50 @@ formatter.examples({
     {
       "cells": [
         "email",
-        "password"
+        "password",
+        "message"
+      ]
+    },
+    {
+      "cells": [
+        "student91@library",
+        "invalid",
+        "Sorry, Wrong Email or Password"
       ]
     },
     {
       "cells": [
         "invalid",
-        "FPEDLRY3"
+        "c4vlSAqZ",
+        "Please enter a valid email address."
       ]
     },
     {
       "cells": [
-        "student91@library",
-        "invalid"
+        "ABC",
+        "",
+        "Please enter a valid email address."
       ]
     },
     {
       "cells": [
         "",
-        "FPEDLRY3"
+        "c4vlSAqZ",
+        "This field is required."
       ]
     },
     {
       "cells": [
         "student91@library",
-        ""
+        "",
+        "Sorry, Wrong Email or Password"
       ]
     },
     {
       "cells": [
         "",
-        ""
+        "",
+        "This field is required."
       ]
     }
   ]
@@ -452,23 +462,154 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "Users login with invalid \"invalid\" and \"FPEDLRY3\"",
+  "name": "Users login with invalid \"student91@library\" and \"invalid\"",
   "keyword": "When "
 });
 formatter.match({
   "location": "com.library.step_definitions.LoginStepDefs.users_login_with_invalid_and(java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.library.step_definitions.LoginStepDefs.users_login_with_invalid_and(LoginStepDefs.java:65)\r\n\tat ✽.Users login with invalid \"invalid\" and \"FPEDLRY3\"(file:///C:/Users/hhila/IdeaProjects/mylibrarypractice/src/test/resources/features/login.feature:31)\r\n",
-  "status": "pending"
+  "status": "passed"
 });
 formatter.step({
-  "name": "Error message \"Sorry, Wrong Email or Password\" display",
+  "name": "Error \"Sorry, Wrong Email or Password\" displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.library.step_definitions.LoginStepDefs.error_message_display(java.lang.String)"
+  "location": "com.library.step_definitions.LoginStepDefs.error_displayed(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Enter with invalid credentials",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@wip"
+    },
+    {
+      "name": "@EUG16-264"
+    },
+    {
+      "name": "@EUG16-224"
+    }
+  ]
+});
+formatter.step({
+  "name": "Users login with invalid \"invalid\" and \"c4vlSAqZ\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.library.step_definitions.LoginStepDefs.users_login_with_invalid_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Error \"Please enter a valid email address.\" displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.library.step_definitions.LoginStepDefs.error_displayed(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Enter with invalid credentials",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@wip"
+    },
+    {
+      "name": "@EUG16-264"
+    },
+    {
+      "name": "@EUG16-224"
+    }
+  ]
+});
+formatter.step({
+  "name": "Users login with invalid \"ABC\" and \"\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.library.step_definitions.LoginStepDefs.users_login_with_invalid_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Error \"Please enter a valid email address.\" displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.library.step_definitions.LoginStepDefs.error_displayed(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
 });
