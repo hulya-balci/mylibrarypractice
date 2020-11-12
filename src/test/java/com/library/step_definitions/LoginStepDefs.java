@@ -3,6 +3,7 @@ package com.library.step_definitions;
 import com.library.pages.BasePage;
 import com.library.pages.DashboardPage;
 import com.library.pages.LoginPage;
+import com.library.utilities.BrowserUtils;
 import com.library.utilities.ConfigurationReader;
 import com.library.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -39,35 +40,56 @@ public class LoginStepDefs {
     @Then("user logged in page")
     public void user_logged_in_page() {
 
-      String actualSubtitle=dashboardPage.getPageSubTitle();
-      Assert.assertEquals("Library", actualSubtitle);
-        System.out.println("actualSubtitle = " + actualSubtitle);
+        String actualTitle=Driver.get().getTitle();
+        String expectedTitle="Library";
+
+       Assert.assertTrue(actualTitle.contains(expectedTitle));
+        System.out.println("actualTitle = " + actualTitle);
+
 
     }
 
 
     @When("user login as “usertype”")
-    public void user_login_as_usertype() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public boolean user_login_as(String usertype) {
+
+        if(usertype.equals("Student")){
+            loginPage.loginAsStudent();
+
+        }else if(usertype.equals("Librarian")){
+            loginPage.loginAsLibrarian();
+        }else{
+
+        }
+return false;
     }
 
     @Then("title contains “page”")
-    public void title_contains_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void title_contains(String page) {
+        if(user_login_as("Student")){
+            Assert.assertTrue(dashboardPage.getPageSubTitle().contains("books"));
+        } else if(user_login_as("Librarian")){
+            Assert.assertTrue(dashboardPage.getPageSubTitle().contains("Dashboard"));
+        }
     }
 
     @When("Users login with invalid {string} and {string}")
-    public void users_login_with_invalid_and(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void users_login_with_invalid_and(String email, String password) {
+        loginPage.login(email,password);
+        BrowserUtils.waitFor(3);
+
+
+
     }
 
-    @Then("Error message {string} display")
-    public void error_message_display(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("Error {string} displayed")
+    public void error_displayed(String expectedMsg) {
+
+        String actualMsg=loginPage.errorMsg.getText();
+        Assert.assertEquals(expectedMsg,actualMsg);
+        System.out.println("actualMsg = " + actualMsg);
+        System.out.println("expectedMsg = " + expectedMsg);
+
     }
 
 

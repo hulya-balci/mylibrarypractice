@@ -1,7 +1,7 @@
-
+@wip
 Feature:As a user, I should be able to login to the library app
 
-@wip
+
   Background:
     Given the user is on the login page
 
@@ -29,11 +29,13 @@ Feature:As a user, I should be able to login to the library app
   Scenario Outline: Enter with invalid credentials
 
     When Users login with invalid "<email>" and "<password>"
-    Then Error message "Sorry, Wrong Email or Password" display
+    Then Error "<message>" displayed
     Examples:
-      | email             | password |
-      | invalid           | FPEDLRY3 |
-      | student91@library | invalid  |
-      |                   | FPEDLRY3 |
-      | student91@library |          |
-      |                   |          |
+      | email             | password | message                             |
+      | student91@library | invalid  | Sorry, Wrong Email or Password      |
+      | invalid     | c4vlSAqZ | Please enter a valid email address. |
+      | ABC               |          | Please enter a valid email address. |
+      |                   | c4vlSAqZ | This field is required.             |
+      | student91@library |          | Sorry, Wrong Email or Password      |
+      |                   |          | This field is required.             |
+
