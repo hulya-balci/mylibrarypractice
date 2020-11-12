@@ -1,7 +1,6 @@
 @wip
 Feature:As a user, I should be able to login to the library app
 
-
   Background:
     Given the user is on the login page
 
@@ -21,8 +20,8 @@ Feature:As a user, I should be able to login to the library app
 
   @EUG16-257  @EUG16-224
   Scenario: verify role login
-    When user login as “Student”
-    Then title contains “page”
+    When user login as "Student"
+    Then title contains "page"
 
 
   @EUG16-264  @EUG16-224
@@ -38,4 +37,6 @@ Feature:As a user, I should be able to login to the library app
       |                   | c4vlSAqZ | This field is required.             |
       | student91@library |          | Sorry, Wrong Email or Password      |
       |                   |          | This field is required.             |
+
+    Scenario: Bakalim bu deneme olacakmi?
 

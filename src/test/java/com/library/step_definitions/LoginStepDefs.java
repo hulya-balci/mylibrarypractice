@@ -50,7 +50,7 @@ public class LoginStepDefs {
     }
 
 
-    @When("user login as “usertype”")
+    @When("user login as {string}")
     public boolean user_login_as(String usertype) {
 
         if(usertype.equals("Student")){
@@ -64,7 +64,7 @@ public class LoginStepDefs {
 return false;
     }
 
-    @Then("title contains “page”")
+    @Then("title contains {string}")
     public void title_contains(String page) {
         if(user_login_as("Student")){
             Assert.assertTrue(dashboardPage.getPageSubTitle().contains("books"));
