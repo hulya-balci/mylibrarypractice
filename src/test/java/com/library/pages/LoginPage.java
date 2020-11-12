@@ -12,13 +12,13 @@ public class LoginPage {
         PageFactory.initElements(Driver.get(), this);
     }
 
-     @FindBy(id = "inputEmail")
+    @FindBy(id = "inputEmail")
     public WebElement emailInput;
 
-     @FindBy(id = "inputPassword")
+    @FindBy(id = "inputPassword")
     public WebElement passwordInput;
 
-     @FindBy(xpath = "//button[@type='submit']")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement signinBtn;
 
      @FindBy(xpath = "//div[@class='alert alert-danger']")
@@ -26,22 +26,22 @@ public class LoginPage {
 
 
 
-     public void login(String email,String password){
-         emailInput.sendKeys(email);
-         passwordInput.sendKeys(password);
-         signinBtn.click();
-     }
+    public void login(String email,String password){
+        emailInput.sendKeys(email);
+        passwordInput.sendKeys(password);
+        signinBtn.click();
+    }
 
-     public void loginAsStudent(){
+    public void loginAsStudent(){
 
-         String email = ConfigurationReader.get("student_username");
-         String password = ConfigurationReader.get("student_password");
+        String email = ConfigurationReader.get("student_username");
+        String password = ConfigurationReader.get("student_password");
 
-         emailInput.sendKeys(email);
-         passwordInput.sendKeys(password);
-         signinBtn.click();
+        emailInput.sendKeys(email);
+        passwordInput.sendKeys(password);
+        signinBtn.click();
 
-     }
+    }
 
     public void loginAsLibrarian (){
 
@@ -53,6 +53,8 @@ public class LoginPage {
         signinBtn.click();
 
     }
+
+
 
 
 
