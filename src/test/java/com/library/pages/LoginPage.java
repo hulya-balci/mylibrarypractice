@@ -26,6 +26,8 @@ public class LoginPage {
          emailInput.sendKeys(email);
          passwordInput.sendKeys(password);
          signinBtn.click();
+
+
      }
 
 
