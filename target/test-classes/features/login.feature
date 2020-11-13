@@ -32,11 +32,11 @@ Feature:As a user, I should be able to login to the library app
     Examples:
       | email             | password | message                             |
       | student91@library | invalid  | Sorry, Wrong Email or Password      |
-      | invalid     | c4vlSAqZ | Please enter a valid email address. |
+      | invalid           | c4vlSAqZ | Please enter a valid email address. |
       | ABC               |          | Please enter a valid email address. |
       |                   | c4vlSAqZ | This field is required.             |
       | student91@library |          | Sorry, Wrong Email or Password      |
       |                   |          | This field is required.             |
 
-    Scenario: Bakalim bu deneme olacakmi?
+  Scenario: Bakalim bu deneme olacakmi?
 
