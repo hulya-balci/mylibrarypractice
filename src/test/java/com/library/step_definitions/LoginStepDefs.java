@@ -54,8 +54,7 @@ public class LoginStepDefs {
     public boolean user_login_as(String usertype) {
 
         if(usertype.equals("Student")){
-            loginPage.loginAsStudent();
-
+           loginPage.loginAsStudent();
         }else if(usertype.equals("Librarian")){
             loginPage.loginAsLibrarian();
         }else{
@@ -64,8 +63,8 @@ public class LoginStepDefs {
 return false;
     }
 
-    @Then("title contains {string}")
-    public void title_contains(String page) {
+    @Then("title contains page")
+    public void title_contains() {
         if(user_login_as("Student")){
             Assert.assertTrue(dashboardPage.getPageSubTitle().contains("books"));
         } else if(user_login_as("Librarian")){

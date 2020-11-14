@@ -21,7 +21,7 @@ Feature:As a user, I should be able to login to the library app
   @EUG16-257  @EUG16-224
   Scenario: verify role login
     When user login as "Student"
-    Then title contains "page"
+    Then title contains page
 
 
   @EUG16-264  @EUG16-224

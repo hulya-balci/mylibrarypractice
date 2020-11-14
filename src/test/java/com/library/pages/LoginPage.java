@@ -1,5 +1,6 @@
 package com.library.pages;
 
+import com.library.utilities.BrowserUtils;
 import com.library.utilities.ConfigurationReader;
 import com.library.utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -36,6 +37,7 @@ public class LoginPage {
 
         String email = ConfigurationReader.get("student_username");
         String password = ConfigurationReader.get("student_password");
+
 
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
