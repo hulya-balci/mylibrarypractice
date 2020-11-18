@@ -10,7 +10,7 @@ Feature: User should be able to see table with default titles
     When user login as "Librarian"
     And navigate to "Books" module
     Then verifies books table titles as
-      | Actions     |
+      | Action     |
       | ISBN        |
       | Name        |
       | Author      |
@@ -24,7 +24,7 @@ Feature: User should be able to see table with default titles
     When user login as "Student"
     And navigate to "Borrowing Books" module
     Then verifies borrowed books table titles as
-      | Actions             |
+      | Action             |
       | Book Name           |
       | Borrowed Date       |
       | Planned Return Date |

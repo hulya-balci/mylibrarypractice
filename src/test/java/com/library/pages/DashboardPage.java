@@ -21,16 +21,12 @@ public class DashboardPage extends BasePage {
     @FindBy (xpath = "//span[@class='title']")
     public List<WebElement> ModulesName;
 
-    @FindBy (xpath = "//*[text()='Borrowing Books']")
+    @FindBy (linkText = "Borrowing Books")
     public WebElement BorrowingBooksModule;
 
 
     @FindBy(xpath = "//table/thead/tr/th")
     public List<WebElement> Headers;
-
-
-
-
 
 
 
