@@ -15,9 +15,9 @@ public class TableStepDefs {
 
     @When("navigate to {string} module")
     public void navigate_to_module(String moduleName) {
-      //  dashboardPage.goToModule(moduleName);
         BrowserUtils.waitFor(2);
-        dashboardPage.BorrowingBooksModule.click();
+       dashboardPage.goToModule(moduleName);
+       // dashboardPage.BorrowingBooksModule.click();
     }
 
     @Then("verifies books table titles as")
