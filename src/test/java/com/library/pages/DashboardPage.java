@@ -35,7 +35,8 @@ public class DashboardPage extends BasePage {
 
     public void goToModule(String moduleName){
 
-        Driver.get().findElement(By.xpath("//*[text()='"+moduleName+"']")).click();
+       // Driver.get().findElement(By.xpath("//*[text()='"+moduleName+"']")).click();
+        Driver.get().findElement(By.linkText(moduleName)).click();
     }
 
 
