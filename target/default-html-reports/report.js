@@ -48,11 +48,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the default record shows 10",
+  "name": "the default record shows \"10\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.library.step_definitions.BookRecordsStepDefs.the_default_record_shows(java.lang.Integer)"
+  "location": "com.library.step_definitions.BookRecordsStepDefs.the_default_record_shows(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

@@ -5,7 +5,7 @@ Feature: See book records on user page
     Given the user is on the login page
     When user login as "Student"
     And go to the books page
-    Then the default record shows 10
+    Then the default record shows "10"
 
   Scenario Outline: Show records for <count> options
     Given the user is on the login page

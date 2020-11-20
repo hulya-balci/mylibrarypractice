@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-11-20T13:43:42.493Z",
+        "start_timestamp": "2020-11-20T13:47:45.430Z",
         "before": [
           {
             "result": {
-              "duration": 15621600,
+              "duration": 299400,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 627426300,
+              "duration": 636829500,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4785571600,
+              "duration": 4680167400,
               "status": "passed"
             },
             "line": 5,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 299517700,
+              "duration": 250680200,
               "status": "passed"
             },
             "line": 6,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 2124403200,
+              "duration": 2106635400,
               "status": "passed"
             },
             "line": 7,
@@ -77,19 +77,19 @@
           },
           {
             "result": {
-              "duration": 139282100,
+              "duration": 138650700,
               "status": "passed"
             },
             "line": 8,
-            "name": "the default record shows 10",
+            "name": "the default record shows \"10\"",
             "match": {
               "arguments": [
                 {
-                  "val": "10",
+                  "val": "\"10\"",
                   "offset": 25
                 }
               ],
-              "location": "com.library.step_definitions.BookRecordsStepDefs.the_default_record_shows(java.lang.Integer)"
+              "location": "com.library.step_definitions.BookRecordsStepDefs.the_default_record_shows(java.lang.String)"
             },
             "keyword": "Then "
           }
