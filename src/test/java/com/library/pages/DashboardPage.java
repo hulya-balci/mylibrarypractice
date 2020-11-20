@@ -9,38 +9,31 @@ import java.util.List;
 
 public class DashboardPage extends BasePage {
 
-   @FindBy (xpath = "//h6[text()='Users']")
+    @FindBy(xpath = "//h6[text()='Users']")
     public WebElement UsersModule;
 
-    @FindBy (xpath = "//*[text()='Books']")
-    public WebElement BooksModule;
-
-    @FindBy (xpath = "//*[text()='Borrowed Books']")
+    @FindBy(xpath = "//*[text()='Borrowed Books']")
     public WebElement BorrowedBooksModule;
 
-    @FindBy (xpath = "//span[@class='title']")
+    @FindBy(xpath = "//span[@class='title']")
     public List<WebElement> ModulesName;
 
-    @FindBy (linkText = "Borrowing Books")
+    @FindBy(linkText = "Borrowing Books")
     public WebElement BorrowingBooksModule;
 
 
     @FindBy(xpath = "//table/thead/tr/th")
     public List<WebElement> Headers;
 
+    @FindBy(linkText = "Books")
+    public WebElement booksModule;
 
 
+    public void goToModule(String moduleName) {
 
-
-
-    public void goToModule(String moduleName){
-
-       // Driver.get().findElement(By.xpath("//*[text()='"+moduleName+"']")).click();
+        // Driver.get().findElement(By.xpath("//*[text()='"+moduleName+"']")).click();
         Driver.get().findElement(By.linkText(moduleName)).click();
     }
-
-
-
 
 
 }

@@ -1,9 +1,9 @@
 Feature: See book records on user page
 
-  @wip
+  @book
   Scenario:  default 10 records
     Given the user is on the login page
-    When user login as "usertype"
+    When user login as "Student"
     And go to the books page
     Then the default record shows 10
 
