@@ -18,11 +18,11 @@ public class BookRecordsStepDefs {
 
     }
 
-    @Then("the default record shows {int}")
-    public void the_default_record_shows(Integer int1) {
+    @Then("the default record shows {string}")
+    public void the_default_record_shows(String string) {
         String firstSelectedOption = booksPage.bookrecord().getFirstSelectedOption().getText();
         System.out.println(firstSelectedOption);
-        Assert.assertEquals("10", firstSelectedOption);
+        Assert.assertEquals(string, firstSelectedOption);
     }
 
     @Then("records options have {int} numbers")
