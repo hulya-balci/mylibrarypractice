@@ -6,10 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class BooksPage {
-    public BooksPage() {
-        PageFactory.initElements(Driver.get(), this);
-    }
+public class BooksPage extends BasePage {
 
     @FindBy(name="tbl_books_length")
     public WebElement bookRecords;
