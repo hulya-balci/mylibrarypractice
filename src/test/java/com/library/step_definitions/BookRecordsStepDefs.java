@@ -6,6 +6,9 @@ import com.library.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class BookRecordsStepDefs {
 
@@ -25,10 +28,13 @@ public class BookRecordsStepDefs {
         Assert.assertEquals(string, firstSelectedOption);
     }
 
-    @Then("records options have {int} numbers")
-    public void records_options_have_numbers(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("records options have following numbers")
+    public void records_options_have_following_numbers(List<String> recordOptions) {
+        BrowserUtils.waitFor(2);
+        List<WebElement> options = booksPage.bookrecord().getOptions();
+        List<String> actualRecordOptions = BrowserUtils.getElementsText(options);
+        Assert.assertEquals(recordOptions,actualRecordOptions);
+
     }
 
 
