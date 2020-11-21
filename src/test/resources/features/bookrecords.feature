@@ -1,16 +1,16 @@
 Feature: See book records on user page
 
-  Scenario:  default 10 records
+  Background:
     Given the user is on the login page
     When user login as "Student"
     And go to the books page
+
+  Scenario:  default 10 records
     Then the default record shows "10"
+
 
   @book
   Scenario: Show records for options
-    Given the user is on the login page
-    When user login as "Student"
-    And go to the books page
     Then records options have following numbers
 
       | 5   |

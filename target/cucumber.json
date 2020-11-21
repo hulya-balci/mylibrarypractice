@@ -1,28 +1,76 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-11-21T10:07:21.611Z",
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user login as \"librarian\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"librarian\"",
+                  "offset": 14
+                }
+              ],
+              "location": "com.library.step_definitions.LoginStepDefs.user_login_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15623600,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "go to the books page",
+            "match": {
+              "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-21T10:16:17.227Z",
         "before": [
           {
             "result": {
-              "status": "passed"
+              "status": "skipped"
             },
             "match": {
               "location": "com.library.step_definitions.Hooks.setUp()"
             }
           }
         ],
-        "line": 10,
-        "name": "Show records for options",
+        "line": 11,
+        "name": "searching book with different categories",
         "description": "",
-        "id": "see-book-records-on-user-page;show-records-for-options",
+        "id": "as-a-user--i-should-able-to-search-book;searching-book-with-different-categories",
         "after": [
           {
             "result": {
-              "duration": 641283700,
-              "status": "passed"
+              "status": "skipped"
             },
             "match": {
               "location": "com.library.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
@@ -34,10 +82,139 @@
         "steps": [
           {
             "result": {
-              "duration": 5380865300,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 11,
+            "line": 12,
+            "name": "categories list should have following names:",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "ALL"
+                ]
+              },
+              {
+                "cells": [
+                  "Action and Adventure"
+                ]
+              },
+              {
+                "cells": [
+                  "Anthology"
+                ]
+              },
+              {
+                "cells": [
+                  "Classic"
+                ]
+              },
+              {
+                "cells": [
+                  "Comic and Graphic Novel"
+                ]
+              },
+              {
+                "cells": [
+                  "Crime and Detective"
+                ]
+              },
+              {
+                "cells": [
+                  "Drama"
+                ]
+              },
+              {
+                "cells": [
+                  "Fable"
+                ]
+              },
+              {
+                "cells": [
+                  "Fairy Tale"
+                ]
+              },
+              {
+                "cells": [
+                  "Fan-Fiction"
+                ]
+              },
+              {
+                "cells": [
+                  "Fantasy"
+                ]
+              },
+              {
+                "cells": [
+                  "Historical Fiction"
+                ]
+              },
+              {
+                "cells": [
+                  "Horror"
+                ]
+              },
+              {
+                "cells": [
+                  "Science Fiction"
+                ]
+              },
+              {
+                "cells": [
+                  "Biography/Autobiography"
+                ]
+              },
+              {
+                "cells": [
+                  "Humor"
+                ]
+              },
+              {
+                "cells": [
+                  "Romance"
+                ]
+              },
+              {
+                "cells": [
+                  "Short Story"
+                ]
+              },
+              {
+                "cells": [
+                  "Essay"
+                ]
+              },
+              {
+                "cells": [
+                  "Memoir"
+                ]
+              },
+              {
+                "cells": [
+                  "Poetry"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@search"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
             "name": "the user is on the login page",
             "match": {
               "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
@@ -46,15 +223,14 @@
           },
           {
             "result": {
-              "duration": 277604600,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 12,
-            "name": "user login as \"Student\"",
+            "line": 6,
+            "name": "user login as \"librarian\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Student\"",
+                  "val": "\"librarian\"",
                   "offset": 14
                 }
               ],
@@ -64,78 +240,170 @@
           },
           {
             "result": {
-              "duration": 2112413300,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 13,
+            "line": 7,
             "name": "go to the books page",
             "match": {
               "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
             },
             "keyword": "And "
-          },
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-21T10:16:17.306Z",
+        "before": [
           {
             "result": {
-              "duration": 2244928500,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 14,
-            "name": "records options have following numbers",
             "match": {
-              "location": "com.library.step_definitions.BookRecordsStepDefs.records_options_have_following_numbers(java.util.List\u003cjava.lang.String\u003e)"
+              "location": "com.library.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 42,
+        "name": "searching a specific book by column names",
+        "description": "",
+        "id": "as-a-user--i-should-able-to-search-book;searching-a-specific-book-by-column-names;;2",
+        "after": [
+          {
+            "result": {
+              "status": "skipped"
             },
-            "rows": [
-              {
-                "cells": [
-                  "5"
-                ]
-              },
-              {
-                "cells": [
-                  "10"
-                ]
-              },
-              {
-                "cells": [
-                  "15"
-                ]
-              },
-              {
-                "cells": [
-                  "50"
-                ]
-              },
-              {
-                "cells": [
-                  "100"
-                ]
-              },
-              {
-                "cells": [
-                  "200"
-                ]
-              },
-              {
-                "cells": [
-                  "500"
-                ]
-              }
-            ],
+            "match": {
+              "location": "com.library.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 39,
+            "name": "verify the search with following \"The Idiot\" information",
+            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@book"
+            "name": "@search"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user login as \"librarian\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"librarian\"",
+                  "offset": 14
+                }
+              ],
+              "location": "com.library.step_definitions.LoginStepDefs.user_login_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "go to the books page",
+            "match": {
+              "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-21T10:16:17.326Z",
+        "before": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.library.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 43,
+        "name": "searching a specific book by column names",
+        "description": "",
+        "id": "as-a-user--i-should-able-to-search-book;searching-a-specific-book-by-column-names;;3",
+        "after": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.library.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 39,
+            "name": "verify the search with following \"Fyodor Dostoevsky\" information",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@search"
           }
         ]
       }
     ],
-    "name": "See book records on user page",
+    "name": "As a user ,I should able to search book",
     "description": "",
-    "id": "see-book-records-on-user-page",
+    "id": "as-a-user--i-should-able-to-search-book",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/bookrecords.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/searchbook.feature",
+    "tags": [
+      {
+        "name": "@search",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
