@@ -3,11 +3,10 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-11-20T13:47:45.430Z",
+        "start_timestamp": "2020-11-21T10:07:21.611Z",
         "before": [
           {
             "result": {
-              "duration": 299400,
               "status": "passed"
             },
             "match": {
@@ -15,14 +14,14 @@
             }
           }
         ],
-        "line": 4,
-        "name": "default 10 records",
+        "line": 10,
+        "name": "Show records for options",
         "description": "",
-        "id": "see-book-records-on-user-page;default-10-records",
+        "id": "see-book-records-on-user-page;show-records-for-options",
         "after": [
           {
             "result": {
-              "duration": 636829500,
+              "duration": 641283700,
               "status": "passed"
             },
             "match": {
@@ -35,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 4680167400,
+              "duration": 5380865300,
               "status": "passed"
             },
-            "line": 5,
+            "line": 11,
             "name": "the user is on the login page",
             "match": {
               "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
@@ -47,10 +46,10 @@
           },
           {
             "result": {
-              "duration": 250680200,
+              "duration": 277604600,
               "status": "passed"
             },
-            "line": 6,
+            "line": 12,
             "name": "user login as \"Student\"",
             "match": {
               "arguments": [
@@ -65,10 +64,10 @@
           },
           {
             "result": {
-              "duration": 2106635400,
+              "duration": 2112413300,
               "status": "passed"
             },
-            "line": 7,
+            "line": 13,
             "name": "go to the books page",
             "match": {
               "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
@@ -77,20 +76,51 @@
           },
           {
             "result": {
-              "duration": 138650700,
+              "duration": 2244928500,
               "status": "passed"
             },
-            "line": 8,
-            "name": "the default record shows \"10\"",
+            "line": 14,
+            "name": "records options have following numbers",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"10\"",
-                  "offset": 25
-                }
-              ],
-              "location": "com.library.step_definitions.BookRecordsStepDefs.the_default_record_shows(java.lang.String)"
+              "location": "com.library.step_definitions.BookRecordsStepDefs.records_options_have_following_numbers(java.util.List\u003cjava.lang.String\u003e)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "5"
+                ]
+              },
+              {
+                "cells": [
+                  "10"
+                ]
+              },
+              {
+                "cells": [
+                  "15"
+                ]
+              },
+              {
+                "cells": [
+                  "50"
+                ]
+              },
+              {
+                "cells": [
+                  "100"
+                ]
+              },
+              {
+                "cells": [
+                  "200"
+                ]
+              },
+              {
+                "cells": [
+                  "500"
+                ]
+              }
+            ],
             "keyword": "Then "
           }
         ],
