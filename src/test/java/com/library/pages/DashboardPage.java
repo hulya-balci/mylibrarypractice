@@ -9,7 +9,7 @@ import java.util.List;
 
 public class DashboardPage extends BasePage {
 
-    @FindBy(xpath = "//h6[text()='Users']")
+    @FindBy(xpath = "//*[text()='Users']")
     public WebElement UsersModule;
 
     @FindBy(xpath = "//*[text()='Borrowed Books']")
