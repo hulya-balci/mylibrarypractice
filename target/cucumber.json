@@ -1,9 +1,9 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
-        "line": 5,
+        "line": 4,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,10 +11,9 @@
         "steps": [
           {
             "result": {
-              "duration": 5413000,
               "status": "skipped"
             },
-            "line": 6,
+            "line": 5,
             "name": "the user is on the login page",
             "match": {
               "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
@@ -23,15 +22,14 @@
           },
           {
             "result": {
-              "duration": 1167000,
               "status": "skipped"
             },
-            "line": 7,
-            "name": "user login as \"Librarian\"",
+            "line": 6,
+            "name": "user login as \"librarian\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Librarian\"",
+                  "val": "\"librarian\"",
                   "offset": 14
                 }
               ],
@@ -41,30 +39,23 @@
           },
           {
             "result": {
-              "duration": 2799000,
+              "duration": 15623600,
               "status": "skipped"
             },
-            "line": 8,
-            "name": "navigate to \"Users\" module",
+            "line": 7,
+            "name": "go to the books page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Users\"",
-                  "offset": 12
-                }
-              ],
-              "location": "com.library.step_definitions.TableStepDefs.navigate_to_module(java.lang.String)"
+              "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
             },
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2020-11-20T22:03:46.119Z",
+        "start_timestamp": "2020-11-21T10:16:17.227Z",
         "before": [
           {
             "result": {
-              "duration": 1028000,
               "status": "skipped"
             },
             "match": {
@@ -73,13 +64,12 @@
           }
         ],
         "line": 11,
-        "name": "Add users with valid info",
+        "name": "searching book with different categories",
         "description": "",
-        "id": "creating-user-on--users-page;add-users-with-valid-info",
+        "id": "as-a-user--i-should-able-to-search-book;searching-book-with-different-categories",
         "after": [
           {
             "result": {
-              "duration": 44000,
               "status": "skipped"
             },
             "match": {
@@ -92,414 +82,129 @@
         "steps": [
           {
             "result": {
-              "duration": 4232000,
-              "status": "skipped"
+              "status": "undefined"
             },
             "line": 12,
-            "name": "click \"Add User\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Add User\"",
-                  "offset": 6
-                }
-              ],
-              "location": "com.library.step_definitions.UsersStepDefs.click(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6242000,
-              "status": "skipped"
-            },
-            "line": 13,
-            "name": "creates new user using following information",
-            "match": {
-              "location": "com.library.step_definitions.UsersStepDefs.creates_new_user_using_following_information(io.cucumber.datatable.DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Full Name",
-                  "Mike Smith"
-                ]
-              },
-              {
-                "cells": [
-                  "Email",
-                  "mikesmith335@email.com"
-                ]
-              },
-              {
-                "cells": [
-                  "Password",
-                  "123456"
-                ]
-              },
-              {
-                "cells": [
-                  "User Group",
-                  "Students"
-                ]
-              },
-              {
-                "cells": [
-                  "Status",
-                  "ACTIVE"
-                ]
-              },
-              {
-                "cells": [
-                  "Start Date",
-                  "11-04-2020"
-                ]
-              },
-              {
-                "cells": [
-                  "End Date",
-                  "11-04-2030"
-                ]
-              },
-              {
-                "cells": [
-                  "Address",
-                  "100 Same st, Anytown, USA, 10001"
-                ]
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 664000,
-              "status": "skipped"
-            },
-            "line": 22,
-            "name": "the message  \"the user has been created\" should be displayed",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"the user has been created\"",
-                  "offset": 13
-                }
-              ],
-              "location": "com.library.step_definitions.UsersStepDefs.the_message_should_be_displayed(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@users"
-          },
-          {
-            "name": "@EUG16-253"
-          },
-          {
-            "name": "@EUG16-224"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 723000,
-              "status": "skipped"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 7425000,
-              "status": "skipped"
-            },
-            "line": 7,
-            "name": "user login as \"Librarian\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Librarian\"",
-                  "offset": 14
-                }
-              ],
-              "location": "com.library.step_definitions.LoginStepDefs.user_login_as(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 795000,
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "navigate to \"Users\" module",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Users\"",
-                  "offset": 12
-                }
-              ],
-              "location": "com.library.step_definitions.TableStepDefs.navigate_to_module(java.lang.String)"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-11-20T22:03:46.469Z",
-        "before": [
-          {
-            "result": {
-              "duration": 45000,
-              "status": "skipped"
-            },
-            "match": {
-              "location": "com.library.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 25,
-        "name": "Closing the adding user",
-        "description": "",
-        "id": "creating-user-on--users-page;closing-the-adding-user",
-        "after": [
-          {
-            "result": {
-              "duration": 31000,
-              "status": "skipped"
-            },
-            "match": {
-              "location": "com.library.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 4854000,
-              "status": "skipped"
-            },
-            "line": 26,
-            "name": "click \"Add User\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Add User\"",
-                  "offset": 6
-                }
-              ],
-              "location": "com.library.step_definitions.UsersStepDefs.click(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 687000,
-              "status": "skipped"
-            },
-            "line": 27,
-            "name": "verify closing the adding",
-            "match": {
-              "location": "com.library.step_definitions.UsersStepDefs.verify_closing_the_adding()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 28,
-            "name": "click Close",
+            "name": "categories list should have following names:",
             "match": {},
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@users"
-          },
-          {
-            "name": "@EUG16-254"
-          },
-          {
-            "name": "@EUG16-224"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 870000,
-              "status": "skipped"
-            },
-            "line": 6,
-            "name": "the user is on the login page",
-            "match": {
-              "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 8160000,
-              "status": "skipped"
-            },
-            "line": 7,
-            "name": "user login as \"Librarian\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Librarian\"",
-                  "offset": 14
-                }
-              ],
-              "location": "com.library.step_definitions.LoginStepDefs.user_login_as(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 685000,
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "navigate to \"Users\" module",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Users\"",
-                  "offset": 12
-                }
-              ],
-              "location": "com.library.step_definitions.TableStepDefs.navigate_to_module(java.lang.String)"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-11-20T22:03:46.533Z",
-        "before": [
-          {
-            "result": {
-              "duration": 205000,
-              "status": "skipped"
-            },
-            "match": {
-              "location": "com.library.step_definitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 31,
-        "name": "Edit user info",
-        "description": "",
-        "id": "creating-user-on--users-page;edit-user-info",
-        "after": [
-          {
-            "result": {
-              "duration": 49000,
-              "status": "skipped"
-            },
-            "match": {
-              "location": "com.library.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 3171000,
-              "status": "skipped"
-            },
-            "line": 32,
-            "name": "click \"Edit User\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Edit User\"",
-                  "offset": 6
-                }
-              ],
-              "location": "com.library.step_definitions.UsersStepDefs.click(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1076000,
-              "status": "skipped"
-            },
-            "line": 33,
-            "name": "do some valid changes",
-            "match": {
-              "location": "com.library.step_definitions.UsersStepDefs.do_some_valid_changes(io.cucumber.datatable.DataTable)"
-            },
             "rows": [
               {
                 "cells": [
-                  "Full Name",
-                  "Smith Mike"
+                  "ALL"
                 ]
               },
               {
                 "cells": [
-                  "Email",
-                  "smithmike@email.com"
+                  "Action and Adventure"
+                ]
+              },
+              {
+                "cells": [
+                  "Anthology"
+                ]
+              },
+              {
+                "cells": [
+                  "Classic"
+                ]
+              },
+              {
+                "cells": [
+                  "Comic and Graphic Novel"
+                ]
+              },
+              {
+                "cells": [
+                  "Crime and Detective"
+                ]
+              },
+              {
+                "cells": [
+                  "Drama"
+                ]
+              },
+              {
+                "cells": [
+                  "Fable"
+                ]
+              },
+              {
+                "cells": [
+                  "Fairy Tale"
+                ]
+              },
+              {
+                "cells": [
+                  "Fan-Fiction"
+                ]
+              },
+              {
+                "cells": [
+                  "Fantasy"
+                ]
+              },
+              {
+                "cells": [
+                  "Historical Fiction"
+                ]
+              },
+              {
+                "cells": [
+                  "Horror"
+                ]
+              },
+              {
+                "cells": [
+                  "Science Fiction"
+                ]
+              },
+              {
+                "cells": [
+                  "Biography/Autobiography"
+                ]
+              },
+              {
+                "cells": [
+                  "Humor"
+                ]
+              },
+              {
+                "cells": [
+                  "Romance"
+                ]
+              },
+              {
+                "cells": [
+                  "Short Story"
+                ]
+              },
+              {
+                "cells": [
+                  "Essay"
+                ]
+              },
+              {
+                "cells": [
+                  "Memoir"
+                ]
+              },
+              {
+                "cells": [
+                  "Poetry"
                 ]
               }
             ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 857000,
-              "status": "skipped"
-            },
-            "line": 36,
-            "name": "verify editing",
-            "match": {
-              "location": "com.library.step_definitions.UsersStepDefs.verify_editing()"
-            },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@users"
-          },
-          {
-            "name": "@EUG16-255"
-          },
-          {
-            "name": "@EUG16-224"
+            "name": "@search"
           }
         ]
       },
       {
-        "line": 5,
+        "line": 4,
         "name": "",
         "description": "",
         "type": "background",
@@ -507,10 +212,9 @@
         "steps": [
           {
             "result": {
-              "duration": 636000,
               "status": "skipped"
             },
-            "line": 6,
+            "line": 5,
             "name": "the user is on the login page",
             "match": {
               "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
@@ -519,15 +223,14 @@
           },
           {
             "result": {
-              "duration": 7712000,
               "status": "skipped"
             },
-            "line": 7,
-            "name": "user login as \"Librarian\"",
+            "line": 6,
+            "name": "user login as \"librarian\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Librarian\"",
+                  "val": "\"librarian\"",
                   "offset": 14
                 }
               ],
@@ -537,30 +240,22 @@
           },
           {
             "result": {
-              "duration": 2229000,
               "status": "skipped"
             },
-            "line": 8,
-            "name": "navigate to \"Users\" module",
+            "line": 7,
+            "name": "go to the books page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Users\"",
-                  "offset": 12
-                }
-              ],
-              "location": "com.library.step_definitions.TableStepDefs.navigate_to_module(java.lang.String)"
+              "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
             },
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2020-11-20T22:03:46.603Z",
+        "start_timestamp": "2020-11-21T10:16:17.306Z",
         "before": [
           {
             "result": {
-              "duration": 23000,
               "status": "skipped"
             },
             "match": {
@@ -568,14 +263,13 @@
             }
           }
         ],
-        "line": 39,
-        "name": "Closing the editing user",
+        "line": 42,
+        "name": "searching a specific book by column names",
         "description": "",
-        "id": "creating-user-on--users-page;closing-the-editing-user",
+        "id": "as-a-user--i-should-able-to-search-book;searching-a-specific-book-by-column-names;;2",
         "after": [
           {
             "result": {
-              "duration": 24000,
               "status": "skipped"
             },
             "match": {
@@ -584,72 +278,129 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
-          {
-            "result": {
-              "duration": 5386000,
-              "status": "skipped"
-            },
-            "line": 40,
-            "name": "click \"Edit User\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Edit User\"",
-                  "offset": 6
-                }
-              ],
-              "location": "com.library.step_definitions.UsersStepDefs.click(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 680000,
-              "status": "skipped"
-            },
-            "line": 41,
-            "name": "verify closing the editing",
-            "match": {
-              "location": "com.library.step_definitions.UsersStepDefs.verify_closing_the_editing()"
-            },
-            "keyword": "And "
-          },
           {
             "result": {
               "status": "undefined"
             },
-            "line": 42,
-            "name": "click Close",
+            "line": 39,
+            "name": "verify the search with following \"The Idiot\" information",
             "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@users"
+            "name": "@search"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
           },
           {
-            "name": "@EUG16-256"
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user login as \"librarian\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"librarian\"",
+                  "offset": 14
+                }
+              ],
+              "location": "com.library.step_definitions.LoginStepDefs.user_login_as(java.lang.String)"
+            },
+            "keyword": "When "
           },
           {
-            "name": "@EUG16-224"
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "go to the books page",
+            "match": {
+              "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-21T10:16:17.326Z",
+        "before": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.library.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 43,
+        "name": "searching a specific book by column names",
+        "description": "",
+        "id": "as-a-user--i-should-able-to-search-book;searching-a-specific-book-by-column-names;;3",
+        "after": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.library.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 39,
+            "name": "verify the search with following \"Fyodor Dostoevsky\" information",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@search"
           }
         ]
       }
     ],
-    "name": "Creating user on  users page",
+    "name": "As a user ,I should able to search book",
     "description": "",
-    "id": "creating-user-on--users-page",
+    "id": "as-a-user--i-should-able-to-search-book",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/users.feature",
+    "uri": "file:src/test/resources/features/searchbook.feature",
     "tags": [
       {
-        "name": "@users",
+        "name": "@search",
         "type": "Tag",
         "location": {
-          "line": 2,
+          "line": 1,
           "column": 1
         }
       }
