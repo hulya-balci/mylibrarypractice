@@ -2,99 +2,17 @@ $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.
 formatter.feature({
   "name": "As a user ,I should able to search book",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@search"
-    }
-  ]
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "the user is on the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user login as \"librarian\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.library.step_definitions.LoginStepDefs.user_login_as(java.lang.String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "go to the books page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.scenario({
-  "name": "searching book with different categories",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@search"
-    }
-  ]
-});
-formatter.step({
-  "name": "categories list should have following names:",
-  "rows": [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
-  ],
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.after({
-  "status": "skipped"
+  "keyword": "Feature"
 });
 formatter.scenarioOutline({
   "name": "searching a specific book by column names",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@search"
+    }
+  ]
 });
 formatter.step({
   "name": "verify the search with following \"\u003ccolumnInfo\u003e\" information",
@@ -112,12 +30,12 @@ formatter.examples({
     },
     {
       "cells": [
-        "The Idiot"
+        "War and Peace"
       ]
     },
     {
       "cells": [
-        "Fyodor Dostoevsky"
+        "Leo Tolstoy"
       ]
     }
   ]
@@ -128,7 +46,7 @@ formatter.background({
   "keyword": "Background"
 });
 formatter.before({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "the user is on the login page",
@@ -138,17 +56,17 @@ formatter.match({
   "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user login as \"librarian\"",
+  "name": "user login as \"Librarian\"",
   "keyword": "When "
 });
 formatter.match({
   "location": "com.library.step_definitions.LoginStepDefs.user_login_as(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "go to the books page",
@@ -158,7 +76,7 @@ formatter.match({
   "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "searching a specific book by column names",
@@ -171,15 +89,17 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "verify the search with following \"The Idiot\" information",
+  "name": "verify the search with following \"War and Peace\" information",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.library.step_definitions.SearchBookStepDefs.verify_the_search_with_following_information(java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.after({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.background({
   "name": "",
@@ -187,7 +107,7 @@ formatter.background({
   "keyword": "Background"
 });
 formatter.before({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "the user is on the login page",
@@ -197,17 +117,17 @@ formatter.match({
   "location": "com.library.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user login as \"librarian\"",
+  "name": "user login as \"Librarian\"",
   "keyword": "When "
 });
 formatter.match({
   "location": "com.library.step_definitions.LoginStepDefs.user_login_as(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "go to the books page",
@@ -217,7 +137,7 @@ formatter.match({
   "location": "com.library.step_definitions.BookRecordsStepDefs.go_to_the_books_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "searching a specific book by column names",
@@ -230,14 +150,16 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "verify the search with following \"Fyodor Dostoevsky\" information",
+  "name": "verify the search with following \"Leo Tolstoy\" information",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "com.library.step_definitions.SearchBookStepDefs.verify_the_search_with_following_information(java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.after({
-  "status": "skipped"
+  "status": "passed"
 });
 });

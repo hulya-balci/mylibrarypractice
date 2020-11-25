@@ -1,11 +1,9 @@
-@search
 Feature: As a user ,I should able to search book
 
   Background:
     Given the user is on the login page
-    When user login as "librarian"
+    When user login as "Librarian"
     And go to the books page
-
 
 
   Scenario: searching book with different categories
@@ -32,12 +30,11 @@ Feature: As a user ,I should able to search book
       | Memoir                  |
       | Poetry                  |
 
-
-
+  @search
   Scenario Outline: searching a specific book by column names
 
     Then verify the search with following "<columnInfo>" information
     Examples:
-      | columnInfo        |
-      | The Idiot         |
-      | Fyodor Dostoevsky |
+      | columnInfo    |
+      | War and Peace |
+      | Leo Tolstoy   |
