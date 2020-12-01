@@ -1,25 +1,39 @@
 package com.library.step_definitions;
 
+import com.library.pages.BooksPage;
+import com.library.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class SearchBookStepDefs {
 
+    BooksPage booksPage= new BooksPage();
     @Then("categories list should have following names:")
-    public void categories_list_should_have_following_names(io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-        // Double, Byte, Short, Long, BigInteger or BigDecimal.
-        //
-        // For other transformations you can register a DataTableType.
-        throw new io.cucumber.java.PendingException();
+    public void categories_list_should_have_following_names(List<String> exoectedcategories) {
+        List<WebElement> bookCategories = booksPage.bookcategories().getOptions();
+        List<String> actualcategory = BrowserUtils.getElementsText(bookCategories);
+
+        Assert.assertEquals(exoectedcategories,actualcategory);
+
     }
 
     @Then("verify the search with following {string} information")
-    public void verify_the_search_with_following_information(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void verify_the_search_with_following_information(String book) {
+        booksPage.searchBook.sendKeys(book);
+        BrowserUtils.waitFor(2);
+
+        if(book.equals("War and Peace")){
+            Assert.assertEquals("War and Peace",booksPage.book.getText());
+        }else if(book.equals("Leo Tolstoy")){
+            Assert.assertEquals("Leo Tolstoy",booksPage.author.getText());
+        }else{
+
+        }
+
+
     }
 
 }
